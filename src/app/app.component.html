@@ -1,6 +1,28 @@
 <h1>Exercice : Produit de matrices</h1>
-<pre>
-On cherche à afficher M1 x M2 = MR
-  avec MR le résultat caculé de M1 x M2
-  et M1 et M2 des matrices fournies par le service MatrixService.
-</pre>
+
+<section class="operation">
+  <label *ngFor="let M of [M1, M2, MR]; index as iM">
+    <table (mouseleave) = "setHilight(-1, -1, -1)">
+      <tbody>
+        <tr *ngFor="let L of M; index as iL">
+          <td *ngFor="let v of L; index as iC"
+              [class.hilight]="hilight(iM, iL, iC)"
+              (mouseenter) = "setHilight(iM, iL, iC)"
+              >
+            {{v}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </label>
+</section>
+
+<hr/>
+
+<form (ngSubmit) = "random()">
+  <pre>
+    Width  : <input name="W" [(ngModel)]="W" type="number" />
+    Height : <input name="L" [(ngModel)]="H" type="number" />
+  </pre>
+  <input type="submit" value="GENERATE" />
+</form>
