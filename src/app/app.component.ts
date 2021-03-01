@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { zip } from 'rxjs';
+import { MatrixService } from './matrix.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'theme-ihm-angular-exo1';
+
+  constructor() {}
+
 }

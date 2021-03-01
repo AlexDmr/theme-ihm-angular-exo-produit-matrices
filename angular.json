@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "theme-ihm-angular-exo1"
+  "defaultProject": "theme-ihm-angular-exo1",
+  "cli": {
+    "analytics": "004bd4b6-3e5c-4566-9983-25c9c394935f"
+  }
 }
